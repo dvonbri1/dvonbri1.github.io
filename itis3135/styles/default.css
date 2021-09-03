@@ -19,7 +19,6 @@ header, footer
 
 h1, h2, h3
 {
-
 	font-family: Cambria, Cochin, Georgia, serif;
 	text-align: center;
 	line-height: 0px;
@@ -33,7 +32,8 @@ a
 
 a:hover
 {
-	text-decoration: overline underline;
+	text-decoration: underline;
+	color: orange;
 }
 
 figure
@@ -45,7 +45,6 @@ figcaption
 {
 	font-style: italic;
 }
-
 
 nav
 {
