@@ -28,13 +28,13 @@ a
 {
 	text-decoration: none;
 	color: lightseagreen;
-	font-style: bold;
+	font-weight: bold;
 }
 
 a:hover
 {
 	text-decoration: underline;
-	color: orange;
+	color: mediumspringgreen;
 }
 
 figure
