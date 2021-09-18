@@ -8,13 +8,22 @@ body
 	font-family: tahoma;
 	color: teal ;
 	background-color: silver;
-	margin-left: 75px;
-	margin-right: 75px;
+
+	margin-left: 150px;
+	margin-right: 150px;
 }
 
 header, footer
 {
+	margin-top: 50px;
+	margin-bottom: 50px;
 	text-align: center;
+}
+
+main
+{
+	margin-left: 100px;
+	margin-right: 100px;
 }
 
 h1, h2, h3
