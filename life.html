@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Grid - Your Weeks Since July 1970</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px 0;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            color: #666;
+            margin: 0;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 15px;
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 0;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            margin: 5px 0 0 0;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-square {
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(52, 1fr);
+            gap: 1px;
+            max-width: 100%;
+            margin: 0 auto;
+            background: #e0e0e0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .week {
+            width: 12px;
+            height: 12px;
+            border-radius: 1px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .week:hover {
+            transform: scale(1.5);
+            z-index: 10;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .lived {
+            background-color: #4CAF50;
+        }
+
+        .current {
+            background-color: #FF9800;
+            animation: pulse 2s infinite;
+        }
+
+        .future {
+            background-color: #E0E0E0;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .year-labels {
+            display: grid;
+            grid-template-columns: repeat(52, 1fr);
+            gap: 1px;
+            max-width: 100%;
+            margin: 10px auto 0;
+            padding: 0 10px;
+        }
+
+        .year-label {
+            font-size: 10px;
+            text-align: center;
+            color: #666;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 1000;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .stats {
+                gap: 20px;
+            }
+            
+            .legend {
+                gap: 15px;
+            }
+            
+            .week {
+                width: 8px;
+                height: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Your Life in Weeks</h1>
+            <p>Each square represents one week of your life, starting July 1970</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number" id="weeksLived">0</div>
+                <div class="stat-label">Weeks Lived</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="yearsLived">0</div>
+                <div class="stat-label">Years Lived</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="weeksRemaining">0</div>
+                <div class="stat-label">Weeks Left*</div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-square lived"></div>
+                <span>Weeks Lived</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-square current"></div>
+                <span>Current Week</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-square future"></div>
+                <span>Future Weeks</span>
+            </div>
+        </div>
+
+        <div class="grid" id="lifeGrid"></div>
+        <div class="year-labels" id="yearLabels"></div>
+        
+        <div style="text-align: center; margin-top: 20px; font-size: 0.9em; color: #666;">
+            *Assuming average lifespan of 80 years
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        const startDate = new Date(1970, 6, 1); // July 1, 1970 (month is 0-indexed)
+        const currentDate = new Date();
+        const assumedLifespan = 80; // years
+        const weeksPerYear = 52.18; // More accurate than 52
+        const totalWeeks = Math.floor(assumedLifespan * weeksPerYear);
+        
+        // Calculate weeks lived
+        const timeDiff = currentDate - startDate;
+        const weeksLived = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 7));
+        const yearsLived = (weeksLived / weeksPerYear).toFixed(1);
+        const weeksRemaining = totalWeeks - weeksLived;
+
+        // Update stats
+        document.getElementById('weeksLived').textContent = weeksLived.toLocaleString();
+        document.getElementById('yearsLived').textContent = yearsLived;
+        document.getElementById('weeksRemaining').textContent = weeksRemaining.toLocaleString();
+
+        // Generate the grid
+        const grid = document.getElementById('lifeGrid');
+        const yearLabels = document.getElementById('yearLabels');
+        const tooltip = document.getElementById('tooltip');
+        
+        for (let week = 0; week < totalWeeks; week++) {
+            const weekElement = document.createElement('div');
+            weekElement.className = 'week';
+            
+            // Calculate the date for this week
+            const weekDate = new Date(startDate.getTime() + (week * 7 * 24 * 60 * 60 * 1000));
+            
+            if (week < weeksLived) {
+                weekElement.classList.add('lived');
+            } else if (week === weeksLived) {
+                weekElement.classList.add('current');
+            } else {
+                weekElement.classList.add('future');
+            }
+            
+            // Add hover effect with date info
+            weekElement.addEventListener('mouseenter', (e) => {
+                const year = weekDate.getFullYear();
+                const month = weekDate.toLocaleDateString('en-US', { month: 'short' });
+                const day = weekDate.getDate();
+                const age = ((week / weeksPerYear)).toFixed(1);
+                
+                tooltip.innerHTML = `Week ${week + 1}<br>${month} ${day}, ${year}<br>Age: ${age} years`;
+                tooltip.style.display = 'block';
+            });
+            
+            weekElement.addEventListener('mousemove', (e) => {
+                tooltip.style.left = e.pageX + 10 + 'px';
+                tooltip.style.top = e.pageY - 10 + 'px';
+            });
+            
+            weekElement.addEventListener('mouseleave', () => {
+                tooltip.style.display = 'none';
+            });
+            
+            grid.appendChild(weekElement);
+        }
+        
+        // Add year labels (every 5 years for clarity)
+        for (let week = 0; week < totalWeeks; week++) {
+            const yearLabel = document.createElement('div');
+            yearLabel.className = 'year-label';
+            
+            if (week % (Math.floor(weeksPerYear * 5)) === 0) {
+                const year = 1970 + Math.floor(week / weeksPerYear);
+                yearLabel.textContent = year;
+            }
+            
+            yearLabels.appendChild(yearLabel);
+        }
+    </script>
+</body>
+</html>

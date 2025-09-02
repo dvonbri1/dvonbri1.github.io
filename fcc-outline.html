@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>freeCodeCamp Full Stack Curriculum</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background-color: #f6f6f6;
+    }
+    details {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.25rem;
+      padding: 0.5rem 0;
+    }
+    details details summary {
+      font-size: 1rem;
+      font-weight: normal;
+      padding: 0.25rem 0.5rem;
+      margin-left: 1rem;
+    }
+    details details p {
+      margin-left: 2rem; /* Indent the paragraphs */
+    }
+    details details {
+      margin-bottom: 0.5rem;
+      border: none;
+      padding: 0;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 1rem;
+    }
+    ul ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .note {
+      font-style: italic;
+      color: #555;
+      margin-top: 0.5rem;
+      font-size: 0.9em;
+    }
+    .summary-button {
+      background: none;
+      border: none;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-left: 10px;
+      padding: 0;
+    }
+    .summary-container {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 6px;
+      font-size: 0.9em;
+      border: 1px solid #eee;
+    }
+    .loading-spinner {
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-left-color: #333;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>freeCodeCamp Certified Full Stack Developer Curriculum</h1>
+  <h2>Outline the first 3-4 sections of this curriculum in one place</h2>
+
+  <details open>
+    <summary>HTML (214 steps total)</summary>
+    <ul>
+      <li>
+        <details open>
+          <summary>
+            Basic HTML (91 steps)
+            <button class="summary-button" onclick="getSummary('Basic HTML')">✨</button>
+          </summary>
+          <div id="summary-Basic HTML" class="summary-container" style="display:none;"></div>
+          <ul>
+            <li>
+              <details>
+                <summary>1. WORKSHOP: Build a Curriculum Outline (11 steps)</summary>
+                <p>Welcome to freeCodeCamp! This workshop will serve as your introduction to HTML and coding in general. You will learn about headings and paragraph elements.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>2. LECTURE: Welcome Message from Quincy Larson (4 quiz pages)</summary>
+                <p>Hear from Quincy Larson, the founder and teacher of freeCodeCamp.</p>
+                <p>Quincy will welcome you to the platform and talk about how the certification works. Quincy will also provide tips on how to learn effectively.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>3. LAB: Debug Camperbot's Profile Page (10 stories)</summary>
+                <p>Camperbot is learning how to code too and needs some help with their HTML.</p>
+                <p>In this lab, you will help Camperbot find and fix the errors in their code.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>4. LECTURE: Understanding HTML Attributes (2 quiz pages)</summary>
+                <p>In these lectures, you will learn more about HTML (HyperText Markup Language), a markup language for creating web pages.</p>
+                <p>You will learn about HTML's role on the web, and what HTML attributes are.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>5. LAB: Debug a Pet Adoption Page (5 stories)</summary>
+                <p>In this lab, you will need to find and fix the errors in this pet adoption page.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>6. LECTURE: Understanding the HTML Boilerplate (3 quiz pages)</summary>
+                <p>In these lectures, you will learn about the HTML boilerplate which is a ready-made template for your webpages.</p>
+                <p>You will learn how to work with the link element, meta element and more.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>7. WORKSHOP: Build a Cat Photo App (42 steps)</summary>
+                <p>HTML stands for HyperText Markup Language and it represents the content and structure of a web page.</p>
+                <p>In this workshop, you will learn how to work with basic HTML elements such as headings, paragraphs, images, links, and lists.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>8. LAB: Build a Recipe Page (11 steps)</summary>
+                <p>In this lab, you'll review HTML basics by creating a web page of your favorite recipe. You'll create an HTML boilerplate and work with headings, lists, images, and more.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>9. LECTURE: HTML Fundamentals (5 quiz pages)</summary>
+                <p>In these lectures, you will learn about HTML fundamentals like the div element, the id and class attributes, the HTML boilerplate, HTML entities, and more.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>10. LAB: Build a Travel Agency Page (13 stories)</summary>
+                <p>In this lab, you'll review working with HTML fundamentals by creating a 
+web page for a travel agency. You'll work with images, the figure element, the figcaption element, the anchor element, and more.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>11. LECTURE: Working with Audio and Video Elements (3 quiz pages)</summary>
+                <p>In these lectures, you will learn how to work with the audio and video elements.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>14. LECTURE: Working with the `iframe` Element (2 quiz pages)</summary>
+                <p>In these lectures, you will learn how to work with the iframe element which is used to embed an external site on your web page.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>15. LAB: Build a Video Compilation Page (7 steps)</summary>
+                <p>In this lab, you'll create a video compilation web page. You'll practice working with the iframe element.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>16. LECTURE: Working with Links (4 quiz pages)</summary>
+                <p>In these lectures, you will learn about links, the target attribute, different link states, absolute, and relative paths, and more.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>17. REVIEW: Basic HTML Review</summary>
+                <p>Before you are quizzed on the HTML knowledge you have gained so far, you first need to review the concepts. Open up this page to review the HTML boilerplate, audio and video elements, the different target attribute values and more.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>18. QUIZ: Basic HTML Quiz (20 questions)</summary>
+                <p>The following quiz will test your knowledge of the basic HTML concepts you have learned so far. If you're getting ready for the exam, there are several quiz sets available for practice. After completing a quiz, you can revisit this page to access a new set of questions.</p>
+              </details>
+            </li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            Semantic HTML (39 steps)
+            <button class="summary-button" onclick="getSummary('Semantic HTML')">✨</button>
+          </summary>
+          <div id="summary-Semantic HTML" class="summary-container" style="display:none;"></div>
+          <ul>
+            <li>
+              <details>
+                <summary>LECTURE: Importance of Semantic HTML (3 quiz pages)</summary>
+                <p>In these lectures, you will learn about semantic HTML and why you should care about it, semantic elements, how semantic HTML differs from presentational HTML, and more.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LECTURE: Understanding Nuanced Semantic Elements (3 quiz pages)</summary>
+                <p>In these lectures, you will learn when you should use certain semantic elements like the em element over the i element, description lists, and more.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LECTURE: Working with Text and Time Semantic Elements (3 quiz pages)</summary>
+                <p>In this lecture, you will learn about the importance of semantics in 
+conveying meaning for text and time-related content including the time, blockquote elements and more.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LECTURE: Working with Specialized Semantic Elements (3 quiz pages)</summary>
+                <p>In this lecture, you will learn about specialized semantic elements like u, s, code elements and more.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>WORKSHOP: Build a Cat Blog Page (23 steps)</summary>
+                <p>In this workshop, you will build an HTML only blog page using semantic elements including the main, nav, article and footer elements.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LAB: Build an Event Hub (9 stories)</summary>
+                <p>In this lab, you'll build an event hub and review semantic elements like header, nav, article, and more.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>REVIEW: Semantic HTML Review</summary>
+                <p>Before you are quizzed on semantic HTML, you first need to review the concepts. Open up this page to review the em, strong, blockquote, address and more semantic HTML elements.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>QUIZ: Semantic HTML Quiz (20 questions)</summary>
+                <p>The following quiz will test your knowledge on semantic HTML concepts you have learned so far. If you're getting ready for the exam, there are several quiz sets available for practice. After completing a quiz, you can revisit this page to access a new set of questions.</p>
+              </details>
+            </li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            Forms and Tables (59 steps)
+            <button class="summary-button" onclick="getSummary('Forms and Tables')">✨</button>
+          </summary>
+          <div id="summary-Forms and Tables" class="summary-container" style="display:none;"></div>
+          <ul>
+            <li>
+              <details>
+                <summary>LECTURE: Working with Forms (4 quiz pages)</summary>
+                <p>In these lectures, you will learn about forms, the role of labels, 
+inputs and buttons in creating forms, client-side form validation, and 
+form states.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>WORKSHOP: Build a Hotel Feedback Form (36 steps)</summary>
+                <p>In this workshop, you will build a Hotel Feedback Form.
+You will practice working with labels, inputs, fieldsets, legends, textareas and buttons.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LAB: Build a Survey Form (16 stories)</summary>
+                <p>In this lab, you'll review HTML forms by creating a survey form.
+You'll practice working with the label element, the different input elements, the required attribute, and more.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LECTURE: Working with Tables (1 quiz pages)</summary>
+                <p>In these lectures, you will learn about HTML tables, how to create them, and when to use them.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>WORKSHOP: Build a Final Exams Table (12 steps)</summary>
+                <p>In this workshop, you will practice working with HTML tables by building a table of final exams.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LAB: Build a Book Catalog Table (7 stories)</summary>
+                <p>In this lab, you'll review HTML tables by building a book information table.
+You'll practice the different table components like the thead, tbody, th, tr, and td elements.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LECTURE: Working with HTML Tools (2 quiz pages)</summary>
+                <p>In these lectures, you will learn about HTML tools and how they let you 
+write better code. These tools include HTML validators, DOM Inspector, 
+and the browser developer tools.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>REVIEW: HTML Tables and Forms Review</summary>
+                <p>Before you are quizzed on HTML forms, tables and tools, you first need to review the concepts.
+Open up this page to review the table, input, and button elements as well as commonly used tools like the HTML validator and more.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>QUIZ: HTML Tables and Forms Quiz (20 questions)</summary>
+                <p>The following quiz will test your knowledge of HTML tables, forms and commonly used HTML tools.
+If
+ you're getting ready for the exam, there are several quiz sets 
+available for practice. After completing a quiz, you can revisit this 
+page to access a new set of questions.</p>
+              </details>
+            </li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            Accessibility (24 steps)
+            <button class="summary-button" onclick="getSummary('Accessibility')">✨</button>
+          </summary>
+          <div id="summary-Accessibility" class="summary-container" style="display:none;"></div>
+          <ul>
+            <li>
+              <details>
+                <summary>LECTURE: Importance of Accessibility and Good HTML Structure (3 quiz pages)</summary>
+                <p>Learn why accessibility is critical for making web content available to everyone, including people with disabilities. This section will cover using semantic HTML to create a strong, accessible foundation.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LECTURE: Working with Accessible Tables and Forms (3 quiz pages)</summary>
+                <p>Focus on best practices for making interactive elements like forms and data tables accessible. This includes proper use of labels, ARIA attributes, and table headings.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LECTURE: Introduction to ARIA (3 quiz pages)</summary>
+                <p>Learn about WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications), a set of attributes that define ways to make web content more accessible to people with disabilities.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LECTURE: Working with Accessible Media Elements (3 quiz pages)</summary>
+                <p>Discover how to add captions, transcripts, and alternative text to audio and video elements, ensuring they are accessible to users with auditory and visual impairments.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LAB: Build a Checkout Page (15 stories)</summary>
+                <p>Practice applying accessibility principles to a real-world project by building a fully accessible e-commerce checkout page. You'll focus on form validation and ARIA roles.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LAB: Design a Movie Review Page (10 stories)</summary>
+                <p>This lab will have you use semantic HTML and ARIA to create a movie review page that is easy to navigate for all users, including those using screen readers.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>LAB: Build a Multimedia Player (20 stories)</summary>
+                <p>Build a custom multimedia player with accessible controls and fallbacks for different media types, reinforcing the concepts of accessible audio and video.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>REVIEW: HTML Accessibility Review</summary>
+                <p>A comprehensive review of all the accessibility concepts covered in this section, from ARIA roles to accessible forms, to help prepare you for the quiz.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>QUIZ: HTML Accessibility Quiz (20 questions)</summary>
+                <p>Test your knowledge on HTML accessibility principles with a series of multiple-choice questions designed to reinforce key concepts.</p>
+              </details>
+            </li>
+          </ul>
+        </details>
+      </li>
+      <li>**REVIEW: HTML Review**</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>CSS (1156 steps total)</summary>
+    <ul>
+      <li>
+        <details>
+          <summary>Computer Basics (16 steps)</summary>
+          <p>Get a quick refresher on how computers work, including the fundamental concepts of file systems, text editors, and browsers. This section ensures you have a solid foundation before diving into coding.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Basic CSS (126 steps)</summary>
+          <p>Dive into the world of CSS! You'll learn what CSS is, how to add it to your HTML, and the basic syntax for writing CSS rules. We'll cover selectors, properties, and values.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Design (23 steps)</summary>
+          <p>Learn the basics of web design theory, including color palettes, typography, and visual hierarchy. You'll understand how to make your websites look good and be easy to read.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Absolute and Relative Units (8 steps)</summary>
+          <p>Explore different ways to size your elements. This section will teach you the difference between fixed units like pixels and responsive units like percentages and viewport units.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Pseudo Classes and Elements (37 steps)</summary>
+          <p>Learn how to target specific states of an element, like when a user hovers over a button, and how to style specific parts of an element, such as the first letter of a paragraph.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Colors (98 steps)</summary>
+          <p>Master the art of using color on the web. We'll cover different color models like RGB, HEX, and HSL, and how to apply them to create beautiful designs.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Styling Forms (67 steps)</summary>
+          <p>Transform plain HTML forms into visually appealing and user-friendly components. You'll learn how to style input fields, buttons, and other form elements.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>The Box Model (54 steps)</summary>
+          <p>Understand the most important concept in CSS layout: the box model. You'll learn about content, padding, borders, and margins, and how they affect the size and placement of your elements.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Flexbox (27 steps)</summary>
+          <p>Learn to use CSS Flexbox, a powerful layout module that makes it easy to align and distribute space among items in a container, even when their size is unknown or dynamic.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Typography (78 steps)</summary>
+          <p>Deepen your understanding of web typography. This section covers font families, font sizes, line height, and other properties that make your text readable and aesthetically pleasing.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Accessibility (72 steps)</summary>
+          <p>Build on your HTML accessibility knowledge by learning how CSS can be used to improve the user experience for everyone, including managing color contrast and focus states.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Positioning (88 steps)</summary>
+          <p>Master CSS positioning, from static and relative to absolute and fixed. You'll learn how to place elements precisely where you want them on the page.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Attribute Selectors (72 steps)</summary>
+          <p>Learn advanced CSS selectors that allow you to style elements based on their attributes, such as `[type="text"]` or `[title]`. This provides more granular control over your styling.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Responsive Design (38 steps)</summary>
+          <p>Learn the principles of responsive web design. You'll use media queries to create layouts that adapt to different screen sizes and devices, ensuring your site looks great everywhere.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Variables (120 steps)</summary>
+          <p>Discover the power of CSS variables (custom properties). You'll learn how to define and use them to make your stylesheets more maintainable and reusable.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Grid (92 steps)</summary>
+          <p>Explore CSS Grid, a two-dimensional layout system that gives you complete control over rows and columns. It's the ideal tool for creating complex, grid-based layouts.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Animations (139 steps)</summary>
+          <p>Bring your web pages to life with CSS animations and transitions. You'll learn to create smooth, eye-catching effects and interactive animations without needing JavaScript.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>**REVIEW: CSS Review**</summary>
+          <p>A final review of all major CSS concepts before the certification exam. We'll cover everything from the box model and Flexbox to Grid and animations.</p>
+        </details>
+      </li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>JavaScript (917 steps total)</summary>
+    <ul>
+      <li>
+        <details>
+          <summary>Code Editors (5 steps)</summary>
+          <p>Get familiar with the tools you'll use to write JavaScript. We'll cover basic features of a code editor that will help you be more productive.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Variables and Strings (62 steps)</summary>
+          <p>Start with the basics of JavaScript: how to declare variables, and how to work with text data using strings. You'll learn about concatenation, templates, and string methods.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Booleans and Numbers (37 steps)</summary>
+          <p>Learn about different data types, including numbers for mathematical operations and booleans for logic and decision-making in your code.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Functions (37 steps)</summary>
+          <p>Master the concept of functions, reusable blocks of code that perform a specific task. You'll learn how to define, call, and pass arguments to functions.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Arrays (34 steps)</summary>
+          <p>Explore arrays, a fundamental data structure for storing collections of data. You'll learn to access, modify, and loop through array elements.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Objects (28 steps)</summary>
+          <p>Discover objects, which are used to store data in key-value pairs. You'll learn how to create objects, access properties, and use object methods.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Loops (21 steps)</summary>
+          <p>Learn how to repeat a block of code using different types of loops, such as `for` and `while` loops, to perform repetitive tasks efficiently.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>JavaScript Fundamentals Review</summary>
+          <p>A comprehensive review of the JavaScript fundamentals you've learned so far, including variables, data types, and basic control flow.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Higher Order Functions and Callbacks (29 steps)</summary>
+          <p>Learn about advanced function concepts like higher-order functions and callbacks, which are essential for asynchronous programming and modern JavaScript frameworks.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>DOM Manipulation and Events (72 steps)</summary>
+          <p>Learn how JavaScript interacts with HTML and CSS. You'll manipulate the Document Object Model (DOM) to change content and style, and handle user events like clicks and key presses.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>JavaScript and Accessibility (3 quiz pages)</summary>
+          <p>Understand how to use JavaScript to create accessible interactive components, focusing on proper use of ARIA and managing dynamic content for screen readers.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>ES6 Features (58 steps)</summary>
+          <p>Get up to speed with modern JavaScript (ES6 and beyond). We'll cover topics like `const` and `let`, arrow functions, and destructuring.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Promises and Asynchronous JavaScript (42 steps)</summary>
+          <p>Master asynchronous operations in JavaScript using Promises, async/await, and the Fetch API to handle data from external sources without blocking the main thread.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Object-Oriented Programming (35 steps)</summary>
+          <p>Learn the core principles of OOP, including classes, objects, inheritance, and polymorphism. You'll learn how to structure your code in a more organized way.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Modules (18 steps)</summary>
+          <p>Learn about JavaScript modules, which allow you to organize your code into separate, reusable files. This makes your projects more maintainable and scalable.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Data Structures and Algorithms (50 steps)</summary>
+          <p>Explore common data structures like stacks, queues, and linked lists, and learn fundamental algorithms for searching and sorting data.</p>
+          </details>
+      </li>
+      <li>
+        <details>
+          <summary>**REVIEW: JavaScript Review**</summary>
+          <p>A final review of all major JavaScript concepts, from fundamentals to advanced topics like asynchronous programming and OOP, to prepare for your final exam.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>**QUIZ: JavaScript Quiz (20 questions)**</summary>
+          <p>Test your knowledge of JavaScript concepts, from basic syntax to more complex ideas, with a series of multiple-choice questions.</p>
+        </details>
+      </li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Testing (24 steps total)</summary>
+    <ul>
+      <li>
+        <details>
+          <summary>Testing Intro (8 steps)</summary>
+          <p>Understand the importance of testing in software development. This section will introduce you to the different types of tests and the benefits of writing them.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Test Driven Development (9 steps)</summary>
+          <p>Learn the TDD methodology: writing tests before you write the code they are meant to test. This practice helps ensure your code is robust and free of bugs.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Automated Tests (7 steps)</summary>
+          <p>Get an introduction to writing automated tests using popular JavaScript testing frameworks. You'll learn how to set up a test environment and write your first test cases.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Unit Testing (15 steps)</summary>
+          <p>Focus on unit testing, which involves testing individual functions or components in isolation to ensure they work as expected.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Integration Testing (10 steps)</summary>
+          <p>Learn how to write integration tests to ensure that different parts of your application work together correctly as a group.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>End-to-End Testing (12 steps)</summary>
+          <p>Understand end-to-end testing, a type of test that simulates a real user's journey through your application to ensure the entire system is working correctly.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>QA and Bugs (25 stories)</summary>
+          <p>Learn about Quality Assurance (QA) and how to identify and debug common issues in a web application. This section is more about practice and problem-solving.</p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>**REVIEW: Testing Review**</summary>
+          <p>A final review of all testing concepts, including unit, integration, and E2E testing, to prepare you for the final project and certification exam.</p>
+        </details>
+      </li>
+    </ul>
+  </details>
+
+</body>
+</html>
